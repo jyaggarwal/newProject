@@ -1,0 +1,10 @@
+---
+- hosts: windows
+  roles:
+   - role: 'roles/HSC/monitoring'
+     tags:
+       - hold_HSC
+   - role: 'roles/common/webtier'
+     tags:
+       - hold_common
+  

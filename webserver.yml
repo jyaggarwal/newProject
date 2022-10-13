@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: windows
   become_method: runas
   roles:
     - role: 'roles/DCE/fooapp'

@@ -3,4 +3,4 @@
     password_expiry_warning:
       name:  PasswordExpiryWarning
       path:  HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
-      value: 3
+      value: 10

@@ -1,4 +1,4 @@
-- hosts: 54.67.34.64
+- hosts: all
   roles:
     - test_role
   

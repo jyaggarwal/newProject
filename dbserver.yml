@@ -7,4 +7,7 @@
    - role: 'roles/common/webtier'
      tags:
        - hold_common
+   - role: 'roles/common/hardening_role'
+     tags:
+       - hold_Hard
   

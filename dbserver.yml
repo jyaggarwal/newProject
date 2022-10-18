@@ -1,5 +1,5 @@
 ---
-- hosts: windows
+- hosts: all
   roles:
    - role: 'roles/HSC/monitoring'
      tags:

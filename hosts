@@ -1,5 +1,5 @@
 [windows]
-50.18.32.201
+54.67.34.64
 #172.31.12.20
 [windows:vars]
 ansible_user=Administrator

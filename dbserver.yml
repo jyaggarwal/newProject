@@ -9,5 +9,5 @@
        - hold_common
    - role: 'roles/common/hardening_role'
      tags:
-       - hold_Hard
+       - hold_hard
   

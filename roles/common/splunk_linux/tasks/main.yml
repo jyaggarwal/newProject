@@ -3,9 +3,6 @@
   copy:
     src: /tmp/splunk-9.0.1-82c987350fde-linux-2.6-x86_64.rpm
     dest: /tmp/
-    owner: ansible
-    group: ansible
-    mode: 0744
 
 - name: Import GnuPG Public Key for Splunk package
   rpm_key:

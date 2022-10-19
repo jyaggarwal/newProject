@@ -10,10 +10,4 @@
    - role: 'roles/common/linux_hardening'
      tags:
        - linux_hardening
-   - role: 'roles/common/splunk_win'
-     tags:
-       - splunk_win
-   - role: 'roles/common/splunk_lin'
-     tags:
-       - splunk_lin
   

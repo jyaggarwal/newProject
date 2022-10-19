@@ -1,5 +1,5 @@
 ---
-- name: passwd expiration min
+- name: user expiration min
   ansible.builtin.user:
     name: "{{ user_name }}"
     expires: "{{ exp }}"

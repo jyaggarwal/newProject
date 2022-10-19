@@ -1,8 +1,8 @@
 ---
 - name: Copy the Splunk Forwarder RPM to remote Servers.
   copy:
-    src: /home/ansible/splunk-9.0.1-82c987350fde-linux-2.6-x86_64.rpm
-    dest: /home/ansible/
+    src: /tmp/splunk-9.0.1-82c987350fde-linux-2.6-x86_64.rpm
+    dest: /tmp/
     owner: ansible
     group: ansible
     mode: 0744
@@ -14,7 +14,7 @@
 
 - name: install splunk
   yum:
-    name: /home/ansible/splunk-9.0.1-82c987350fde-linux-2.6-x86_64.rpm
+    name: /tmp/splunk-9.0.1-82c987350fde-linux-2.6-x86_64.rpm
     state: latest
   become: true
 

@@ -8,6 +8,7 @@
   rpm_key:
     key: https://docs.splunk.com/images/6/6b/SplunkPGPKey.pub
     state: present
+  become: true  
 
 - name: install splunk
   yum:

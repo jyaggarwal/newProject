@@ -4,7 +4,7 @@
    - role: 'roles/HSC/monitoring'
      tags:
        - hold_HSC
-   - role: 'roles/common/window_hardening'
+   - role: 'roles/common/windows_hardening'
      tags:
        - windows_hardening
    - role: 'roles/common/linux_hardening'

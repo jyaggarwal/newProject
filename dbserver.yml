@@ -6,7 +6,7 @@
        - hold_HSC
    - role: 'roles/common/window_hardening'
      tags:
-       - window_hardening
+       - windows_hardening
    - role: 'roles/common/linux_hardening'
      tags:
        - linux_hardening

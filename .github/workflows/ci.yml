@@ -4,8 +4,7 @@ name: CI
   pull_request:
   push:
     branches:
-      - main
-
+      - master
 jobs:
 
   test:

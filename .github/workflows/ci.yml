@@ -14,10 +14,9 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: jyaggarwal/newProject@v2
+        uses: jyaggarwal/newProject@2.298.2
         with:
           command: lint
-          node-version: '15'
   test:
     needs:
       - lint
@@ -32,9 +31,8 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: jyaggarwal/newProject@v2
+        uses: jyaggarwal/newProject@2.298.2
         with:
-          node-version: '15'
           image: "${{ matrix.image }}"
           options: parallel
           scenario: my_specific_scenario

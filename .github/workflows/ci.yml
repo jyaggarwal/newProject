@@ -6,35 +6,36 @@ name: CI
     branches:
       - master
 jobs:
-  lint:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-        with:
-          path: "${{ github.repository }}"
-      - name: molecule
-        uses: jyaggarwal/newProject@master
-        with:
-          command: lint
-          version: '2.298.2'
+
   test:
-    needs:
-      - lint
-    runs-on: ubuntu-20.04
+    name: Molecule
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         image:
           - ubuntu
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
+      - name: Check out the codebase
+        uses: actions/checkout@v2
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: jyaggarwal/newProject@master
+        uses: robertdebock/molecule-action@4.0.9
         with:
-          version: '2.298.2'
           image: "${{ matrix.image }}"
           options: parallel
           scenario: my_specific_scenario
+
+      - name: Set up Python 3.
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: install dependacies.
+        run: pip3 install molecule[docker] yamllint ansible-lint
+
+      - name: run Molecule tests
+        run: molecule test
+        env:
+         ANSIBLE_FORCE_COLOR: '1'

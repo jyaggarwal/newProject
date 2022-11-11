@@ -14,7 +14,7 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: jyaggarwal/newProject@v3
+        uses: jyaggarwal/newProject@v2
         with:
           command: lint
   test:
@@ -31,7 +31,7 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: molecule
-        uses: jyaggarwal/newProject@v3
+        uses: jyaggarwal/newProject@v2
         with:
           image: "${{ matrix.image }}"
           options: parallel

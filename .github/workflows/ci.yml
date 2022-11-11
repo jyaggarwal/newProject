@@ -20,12 +20,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: "${{ github.repository }}"
-      - name: molecule
-        uses: jyaggarwal/newProject@master
-        with:
-          image: "${{ matrix.image }}"
-          options: parallel
-          scenario: my_specific_scenario
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -34,6 +28,13 @@ jobs:
 
       - name: install dependacies.
         run: pip3 install molecule[docker] yamllint ansible-lint
+        
+      - name: molecule on repo
+        uses: jyaggarwal/newProject@master
+        with:
+          image: "${{ matrix.image }}"
+          options: parallel
+          scenario: my_specific_scenario
 
       - name: run Molecule tests
         run: molecule test

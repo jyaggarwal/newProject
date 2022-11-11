@@ -17,6 +17,7 @@ jobs:
         uses: jyaggarwal/newProject@master
         with:
           command: lint
+          version: 2.298.2
   test:
     needs:
       - lint
@@ -33,6 +34,7 @@ jobs:
       - name: molecule
         uses: jyaggarwal/newProject@master
         with:
+          version: 2.298.2
           image: "${{ matrix.image }}"
           options: parallel
           scenario: my_specific_scenario

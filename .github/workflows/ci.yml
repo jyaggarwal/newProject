@@ -36,9 +36,9 @@ jobs:
           molecule init role acme.my_new_role --driver-name docker
           # cp -a /home/runner/work/newProject/my_new_role/. my_test_role/
           ln -s ../../../roles/ ./my_new_role/molecule/default/roles
+          #ls -la
+          cd my_new_role/molecule/default/roles/
           ls -la
-          cd my_new_role/molecule/default/roles
-          ls
           # vi my_new_role/molecule/default/converge.yml
           # echo "  roles:" >> my_new_role/molecule/default/converge.yml
           # echo "    - role: DCE/fooapp" >> my_new_role/molecule/default/converge.yml

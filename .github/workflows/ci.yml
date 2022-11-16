@@ -44,7 +44,6 @@ jobs:
           echo "    - role: DCE/fooapp" >> my_new_role/molecule/default/converge.yml
           echo "    - role: HSC/monitoring" >> my_new_role/molecule/default/converge.yml
           cat my_new_role/molecule/default/converge.yml
-    
-      # - name: Test with molecule
-      # run: cd my_new_role && molecule list && molecule create && molecule list && molecule converge
+      - name: Test with molecule
+        run: cd my_new_role && molecule list && molecule create && molecule list && molecule converge
         

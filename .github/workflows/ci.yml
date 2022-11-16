@@ -37,12 +37,12 @@ jobs:
           # cp -a /home/runner/work/newProject/my_new_role/. my_test_role/
           ln -s ../../../roles/ ./my_new_role/molecule/default/roles
           #ls -la
-          cd my_new_role/molecule/default/roles/
+          # cd my_new_role/molecule/default/roles/
           ls -la
-          # vi my_new_role/molecule/default/converge.yml
-          # echo "  roles:" >> my_new_role/molecule/default/converge.yml
-          # echo "    - role: DCE/fooapp" >> my_new_role/molecule/default/converge.yml
-          # echo "    - role: HSC/monitoring" >> my_new_role/molecule/default/converge.yml
+          vi my_new_role/molecule/default/converge.yml
+          echo "  roles:" >> my_new_role/molecule/default/converge.yml
+          echo "    - role: DCE/fooapp" >> my_new_role/molecule/default/converge.yml
+          echo "    - role: HSC/monitoring" >> my_new_role/molecule/default/converge.yml
           cat my_new_role/molecule/default/converge.yml
       - name: Test with molecule
         run: cd my_new_role && molecule list && molecule create && molecule list && molecule converge

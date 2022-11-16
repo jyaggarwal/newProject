@@ -39,7 +39,7 @@ jobs:
           #ls -la
           # cd my_new_role/molecule/default/roles/
           ls -la
-          vi my_new_role/molecule/default/converge.yml
+          # vi my_new_role/molecule/default/converge.yml
           echo "  roles:" >> my_new_role/molecule/default/converge.yml
           echo "    - role: DCE/fooapp" >> my_new_role/molecule/default/converge.yml
           echo "    - role: HSC/monitoring" >> my_new_role/molecule/default/converge.yml

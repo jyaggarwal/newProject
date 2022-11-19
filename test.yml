@@ -1,5 +1,5 @@
 ---
-  - name: Playbook
+  - name: Test Playbook
     hosts: localhost
     tasks:
       - name: Test Message

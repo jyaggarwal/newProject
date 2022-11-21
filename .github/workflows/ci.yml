@@ -40,5 +40,5 @@ jobs:
           #echo "    - role: HSC/monitoring" >> my_new_role/molecule/default/converge.yml
           #cat my_new_role/molecule/default/converge.yml
       - name: Test with molecule
-        run: cd myenvmolecule && molecule list && molecule create && molecule list && molecule converge
+        run: cd newProject/myenvmolecule && molecule list && molecule create && molecule list && molecule converge
         

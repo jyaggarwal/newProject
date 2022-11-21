@@ -1,5 +1,5 @@
 ---
-  - name: Test Playbook for Hello
+  - name: Test Playbook Test
     hosts: localhost
     tasks:
       - name: Test Message

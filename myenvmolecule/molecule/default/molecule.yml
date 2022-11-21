@@ -24,7 +24,7 @@ scenario:
 provisioner:
   name: ansible
   env:
-    ANSIBLE_ROLES_PATH: ../../roles/
+    ANSIBLE_ROLES_PATH: ../../../roles/
 verifier:
   name: ansible
 lint: |

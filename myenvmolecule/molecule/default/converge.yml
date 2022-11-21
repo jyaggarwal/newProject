@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   roles:
-    - role: test-role
-    - role: test-role-2
+    - role: DCE/fooapp
+    - role: HSC/monitoring
 
 

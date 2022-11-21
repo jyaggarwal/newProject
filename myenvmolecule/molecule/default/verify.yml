@@ -3,8 +3,7 @@
 
 - name: Verify
   hosts: all
-  tasks:
-  - name: Initialize role without actually running it
-    assert:
-      that: true
+  roles:
+    - role: DCE/fooapp
+    - role: HSC/monitoring
 

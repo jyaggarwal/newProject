@@ -30,7 +30,7 @@ jobs:
       #    python3 -m pip install molecule ansible-core
       #    python3 -m pip install --upgrade --user setuptools
       #    python3 -m pip install --user "molecule[docker]"
- 
+      #
       - name: Molecule Testing
         run: cd newProject/myenvmolecule && molecule list && molecule create && molecule converge && molecule list
         

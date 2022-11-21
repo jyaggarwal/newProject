@@ -1,5 +1,0 @@
-- name: Install the latest version of Apache for test-role-2
-  ansible.builtin.yum:
-    name: httpd
-    state: latest
-

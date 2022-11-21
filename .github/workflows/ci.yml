@@ -30,6 +30,6 @@ jobs:
           #python3 -m pip install --upgrade --user setuptools
           #python3 -m pip install --user "molecule[docker]"
  
-      - name: Test with molecule
+      - name: Molecule Testing
         run: cd newProject/myenvmolecule && molecule test
         

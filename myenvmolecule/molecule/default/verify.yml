@@ -7,4 +7,6 @@
   - name: Initialize role without actually running it
     ansible.builtin.include_role:
       name: DCE/fooapp
-      tasks_from: init
+      assert:
+        that: true
+

@@ -1,7 +1,7 @@
 ---
-  - name: Testing Playbook Test123
+  - name: Testing Playbook
     hosts: localhost
     tasks:
       - name: Test Message
         debug:
-          msg: "Hello World"
+          msg: "Hello World Message"

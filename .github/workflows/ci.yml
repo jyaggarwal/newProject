@@ -3,7 +3,7 @@ name: Molecule Test
 on:
  push:
    paths:
-     - 'DemoProject/roles/common/webtier/**'
+     - 'newProject/roles/common/webtier/**'
   
 jobs:
   build:

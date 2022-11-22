@@ -2,4 +2,4 @@
   ansible.builtin.yum:
     name:
       - httpd
-    state: present  
+    state: present               

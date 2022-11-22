@@ -1,7 +1,7 @@
 ---
-  - name: Testing Playbook
+  - name: Testing Playbook for Test Of CI
     hosts: localhost
     tasks:
-      - name: Test Message
+      - name: Test Message here
         debug:
           msg: "Hello World Message"

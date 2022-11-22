@@ -1,10 +1,12 @@
 ---
 name: Molecule Test
-'on':
-  pull_request:
-  push:
-    branches:
-      - master
+on:
+ pull_request:
+ #push:
+   branches:
+     master
+ #check_suite:
+    #types: [completed]
   
 jobs:
   build:
@@ -26,10 +28,10 @@ jobs:
           
       - name: Install dependencies
         run: |
-          # python3 -m pip install --upgrade pip
-          # python3 -m pip install molecule ansible-core
-          # python3 -m pip install --upgrade --user setuptools
-          # python3 -m pip install --user "molecule[docker]"
+          python3 -m pip install --upgrade pip
+          python3 -m pip install molecule ansible-core
+          python3 -m pip install --upgrade --user setuptools
+          python3 -m pip install --user "molecule[docker]"
       
       - name: Molecule Testing
         run: cd newProject/myenvmolecule && molecule list && molecule create && molecule converge && molecule list && molecule verify

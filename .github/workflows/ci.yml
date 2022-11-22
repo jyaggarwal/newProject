@@ -4,7 +4,7 @@ name: Molecule Test
   pull_request:
   push:
     paths:
-      - 'newProject/roles/DCE/fooapp'
+      - 'newProject/roles/DCE/fooapp/**'
   
 jobs:
   build:

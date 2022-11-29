@@ -1,6 +1,6 @@
 ---
   - name: Testing Playbook for ansible"
-    hosts: localhost
+    hosts: all
     tasks:
       - name: Test Message here
         debug:
